@@ -8,9 +8,9 @@ def get_current_time():
 
 from flask import Flask, render_template
 
-application = Flask(__name__)
+app = Flask(__name__)
 
-@application.route('/')
+@app.route('/')
 def display_time():
     time = get_current_time()
     return render_template('home.html', time=time)
